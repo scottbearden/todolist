@@ -1,0 +1,10 @@
+<div id="<%= dom_id task %>">
+  <div class="card">
+    <h5 class="card-title"><%= task.title %></h5>
+    <p class="card-text"><%= task.body %></p>
+    <%= simple_form_for(task) do |f| %>
+      <%= f.input :completed, as: :boolean, label: "Completed?" %>
+      <%= f.submit "Update", class: "btn btn-primary" %>
+      <% end %>
+  </div>
+</div>
